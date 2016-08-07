@@ -30,7 +30,11 @@
      *
      * @param  property_list i18n_dict : The dictionary to use for translation.
      */
-  	load: function(i18n_dict) {
+  	load: function(i18n_dict,$replace=true) {
+  	  if ($replace) {
+  	     this.dict = i18n_dict;
+  	  }
+  	  else 
       if (this.dict !== null) {
         $.extend(this.dict, i18n_dict);
       } else {
